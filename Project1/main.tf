@@ -11,13 +11,21 @@ variable "region" {
   default = "us-central1"
 }
 module "firstVM" {
-  source = "./Module1/Compute/VM"
-  instance_name = "myvm"
+  source              = "./Module1/Compute/VM"
+  instance_name       = "vm-set1"
+  number_of_instances = 2
+  machine_type        = "n1-standard-1"
+  zone                = var.zone
 }
-module "vpc" {
-  source = "./Module1/Compute/VPC"
-  vpc_name = "myvpc"
+
+module "secondVM" {
+  source              = "./Module1/Compute/VM"
+  instance_name       = "vm-set2"
+  number_of_instances = 3
+  machine_type        = "n1-highmem-2"
+  zone                = var.zone
 }
-output "instance_id" {
-  value = module.firstVM.instance_id
+
+output "instance_ids" {
+  value = module.firstVM.instance_ids
 }

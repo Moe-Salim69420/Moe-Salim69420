@@ -1,6 +1,7 @@
 resource "google_compute_instance" "VM" {
     machine_type = var.machine_type
-    name = var.instance_name
+    count = var.number_of_instances
+    name = "${var.instance_name} - ${count.index}"
     zone = var.zone
     project = var.project
     boot_disk {

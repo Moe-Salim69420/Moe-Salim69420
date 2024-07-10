@@ -22,3 +22,7 @@ variable "region" {
 variable "zone" {
     default = "us-central1-a"
 }
+variable "number_of_instances" {
+    type = number
+    default = 2
+}

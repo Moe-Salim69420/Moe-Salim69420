@@ -1,3 +1,3 @@
-output "instance_id" {
-  value = google_compute_instance.VM.self_link
+output "instance_ids" {
+  value = [for instance in google_compute_instance.VM : instance.self_link]
 }
