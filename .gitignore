@@ -3,3 +3,4 @@ Credentials.json
 .terraform.lock.hcl
 terraform-gcp-428122-b3e369e1b64c.json:Zone
 Credentials
+.gitignore
