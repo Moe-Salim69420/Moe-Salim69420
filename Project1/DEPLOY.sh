@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the Terraform working directory
-export TF_WORKING_DIR="/home/mohammad/Terraform_GCP/terraform.tfstate.d/Dev/Project1/"
+export TF_WORKING_DIR="/home/mohammad/Terraform_GCP/Project1"
 echo -e "TERRAFORM DIRECTORY IS ${TF_WORKING_DIR}"
 # Initialize Terraform
 echo -e "initializing Terraform .. 1\n"
